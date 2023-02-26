@@ -1,25 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package number;
-
-/**
- *
- * @author DELL
- */
-/*
-public class GuessTheNumber {
-
-    /**
-     * @param args the command line arguments
-     */
-    //public static void main(String[] args) {
-        // TODO code application logic here
-    //}
-    
-//}*/
 
 import java.util.Random;
 import javax.swing.JOptionPane;
@@ -30,8 +8,8 @@ public class GuessTheNumber
     {
         int min = 1;
         int max = 100;
-        int attempts = 5; // Maximum number of attempts allowed
-        int score = 0; // Starting score
+        int attempts = 5; 
+        int score = 0; 
         
         Random rand = new Random();
         int target = rand.nextInt(max - min + 1) + min;
@@ -44,7 +22,7 @@ public class GuessTheNumber
             if (guess == target)
             {
                 JOptionPane.showMessageDialog(null, "Congratulations! You guessed the number in " + i + " attempts.");
-                score += 10 * (attempts - i + 1); // Award points based on number of attempts
+                score += 10 * (attempts - i + 1); 
                 break;
             }
             else if (guess < target)
